@@ -1,5 +1,5 @@
 # Laboratorio 5 – Sistemas Operativos 2025
-### Universidad Rafael Landívar  
+### Universidad Del Valle de Guatemala  
 **Nombre:** Cindy Gualim  
 **Curso:** Sistemas Operativos  
 **Fecha de entrega:** 23 de mayo de 2025
