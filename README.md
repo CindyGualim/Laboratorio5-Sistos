@@ -10,6 +10,64 @@
 
 Este laboratorio tiene como objetivo simular el consumo controlado de un recurso compartido entre múltiples hilos utilizando mecanismos de sincronización como **semáforos** y **monitores**. Se desarrollaron dos programas independientes que cumplen con lo solicitado en el documento oficial del laboratorio.
 
+# Laboratorio 5 – Sistemas Operativos 2025
+**Nombre:** Cindy Gualim  
+**Curso:** Sistemas Operativos  
+**Fecha de entrega:** 23 de mayo de 2025
+
+---
+
+## 🧠 Descripción general
+
+Este laboratorio consiste en simular el uso compartido de un recurso entre múltiples hilos (threads) en C, utilizando mecanismos de sincronización. Se desarrollaron dos programas: uno con semáforos y otro con monitor, cumpliendo con todos los puntos requeridos por el documento oficial.
+
+---
+
+##  Cumplimiento del PDF – párrafo por párrafo
+
+### . “...gestionar el consumo de un recurso digital... número de threads ajustable... número de iteraciones ajustable...”
+- **Cómo se cumple:**  
+  Se creó el archivo `config.h` donde se definieron las constantes `N_RECURSOS`, `N_THREADS`, `N_ITER` y `MAX_PETICION`. Esto permite modificar fácilmente el comportamiento de los programas sin tocar su lógica interna.
+
+---
+
+### . “Su primer programa debe usar semáforos de Pthreads para regular el consumo y devolución de recursos por múltiples hilos...”
+- **Cómo se cumple:**  
+  En el archivo `sem_solo_uno.c`, se utiliza `sem_t`, `sem_init`, `sem_wait` y `sem_post` para implementar un control concurrente con semáforos. Se lanzan `N_THREADS` y cada uno consume y devuelve un recurso en cada iteración.
+
+---
+
+### . “...deberá producir una bitácora con mensajes representando las acciones de los hilos... identificando cada acción por el hilo que la ejecuta y por la iteración...”
+- **Cómo se cumple:**  
+  Se creó el archivo `bitacora_semaforos.txt`, donde se redirige la salida del programa con semáforos. Cada hilo imprime claramente cuándo consume y cuándo devuelve un recurso, junto con su ID e iteración correspondiente.
+
+---
+
+### . “Su segundo programa mejorará este esquema incluyendo funciones decrease_count e increase_count... usando un monitor...”
+- **Cómo se cumple:**  
+  En el archivo `monitor_recursos.c` se implementan las funciones `decrease_count(int count)` e `increase_count(int count)` utilizando `pthread_mutex_t` y `pthread_cond_t`. El acceso a los recursos es controlado con un monitor que permite a los hilos esperar si no hay suficientes recursos disponibles.
+
+---
+
+### . “...producir una bitácora con mensajes representando las acciones de los hilos…” (segundo programa)
+- **Cómo se cumple:**  
+  Se creó el archivo `bitacora_monitor.txt`, que registra detalladamente el comportamiento de los hilos en el segundo programa. Se indica qué hilo pidió cuántos recursos, en qué iteración, y cuándo los devolvió.
+
+---
+
+### . “...número de threads ajustable, número de iteraciones ajustable, recurso representado por una cantidad (int) también ajustable…”
+- **Cómo se cumple:**  
+  Este requerimiento se cubre completamente mediante el uso del archivo `config.h`, incluido en ambos programas. Cambiar los valores de `N_THREADS`, `N_ITER`, `N_RECURSOS` o `MAX_PETICION` es sencillo y no requiere modificar el resto del código.
+
+---
+
+### . “...la fecha de entrega es el viernes 23 de mayo de 2025…”
+- **Cómo se cumple:**  
+  Todos los archivos fueron creados, probados, y subidos al repositorio antes de la fecha indicada. El laboratorio está completo y funcional para su evaluación.
+
+
+
+
 ---
 
 ##  Requisitos y cómo se cumplieron
