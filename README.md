@@ -17,7 +17,7 @@ Este laboratorio tiene como objetivo simular el consumo controlado de un recurso
 
 ---
 
-## 🧠 Descripción general
+##  Descripción general
 
 Este laboratorio consiste en simular el uso compartido de un recurso entre múltiples hilos (threads) en C, utilizando mecanismos de sincronización. Se desarrollaron dos programas: uno con semáforos y otro con monitor, cumpliendo con todos los puntos requeridos por el documento oficial.
 
