@@ -10,17 +10,6 @@
 
 Este laboratorio tiene como objetivo simular el consumo controlado de un recurso compartido entre múltiples hilos utilizando mecanismos de sincronización como **semáforos** y **monitores**. Se desarrollaron dos programas independientes que cumplen con lo solicitado en el documento oficial del laboratorio.
 
-# Laboratorio 5 – Sistemas Operativos 2025
-**Nombre:** Cindy Gualim  
-**Curso:** Sistemas Operativos  
-**Fecha de entrega:** 23 de mayo de 2025
-
----
-
-##  Descripción general
-
-Este laboratorio consiste en simular el uso compartido de un recurso entre múltiples hilos (threads) en C, utilizando mecanismos de sincronización. Se desarrollaron dos programas: uno con semáforos y otro con monitor, cumpliendo con todos los puntos requeridos por el documento oficial.
-
 ---
 
 ##  Cumplimiento del PDF – párrafo por párrafo
